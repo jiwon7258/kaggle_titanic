@@ -13,6 +13,7 @@ test = pd.read_csv("test.csv")
 # 크게 관련 없는 columns를 삭제한다
 # Ticket, Fare, Cabin, PasengerId, Name
 train.drop(["Ticket", "Fare", "Cabin", "PassengerId", "Name"], axis=1, inplace=True)
+test.drop(["Ticket", "Fare", "Cabin", "PassengerId", "Name"], axis=1, inplace=True)
 
 # NaN값이 들어있는 columns를 확인한다
 train.isnull().sum(axis=0)
